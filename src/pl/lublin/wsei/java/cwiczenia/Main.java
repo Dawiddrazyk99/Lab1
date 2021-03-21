@@ -1,3 +1,4 @@
+//Zadanie 10 D
 package pl.lublin.wsei.java.cwiczenia;
 import java.util.Scanner;
 public class Main {
