@@ -1,12 +1,13 @@
-//Zadanie 10 D
+//Zadanie 10f
 package pl.lublin.wsei.java.cwiczenia;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
         int num1=0, num2=0;
-        do {
-
+        do
+            {
             System.out.print("Podaj liczby, które mam dodać: ");
             num1 = input.nextInt();
             num2 = input.nextInt();
@@ -24,10 +25,10 @@ public class Main {
             System.out.println("DEC: " + leftPad(sumaString, character, charWidth));
             System.out.println("HEX: " + leftPad(Integer.toHexString(suma).toUpperCase(), character, charWidth));
             System.out.println("BIN: " + leftPad(Integer.toBinaryString(suma), character, charWidth));
-        }
-        while (true);
+        } while (true);
     }
-    public static String leftPad(String aText, char aChar, int aWidtch)
+
+    private static String leftPad(String aText, char aChar, int aWidtch)
     {
         String res  = aText;
         for (int i = 0; i < aWidtch - aText.length(); i++ )
