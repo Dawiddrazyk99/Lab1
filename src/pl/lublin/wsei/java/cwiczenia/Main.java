@@ -1,3 +1,4 @@
+//Zadanie 7a
 package pl.lublin.wsei.java.cwiczenia;
 
 /** java doct */
