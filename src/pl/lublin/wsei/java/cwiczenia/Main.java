@@ -1,4 +1,4 @@
-//Zadanie 10b
+//Zadanie 10d
 package pl.lublin.wsei.java.cwiczenia;
 
 import java.util.Scanner;
@@ -18,11 +18,25 @@ public class Main {
                 break;
 
             int suma = num1 + num2;
+            String sumaString = Integer.toString(suma);
+
+            char character = '0';
+            int charWidth = 8;
 
             System.out.printf("Wynik dodawania %d + %d:%n", num1, num2);
-            System.out.println("DEC: " + suma);
-            System.out.println("HEX: " + Integer.toHexString(suma));
-            System.out.println("BIN: " + Integer.toBinaryString(suma));
+            System.out.println("DEC: " + leftPad(sumaString, character, charWidth));
+            System.out.println("HEX: " + leftPad(Integer.toHexString(suma).toUpperCase(), character, charWidth));
+            System.out.println("BIN: " + leftPad(Integer.toBinaryString(suma), character, charWidth));
         } while (true);
     }
+
+    public static String leftPad(String aText, char aChar, int aWidtch)
+    {
+        String res  = aText;
+        for (int i = 0; i < aWidtch - aText.length(); i++ )
+            res =aChar + res;
+
+        return  res;
+    }
+
 }
