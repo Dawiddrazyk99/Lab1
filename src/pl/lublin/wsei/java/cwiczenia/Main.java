@@ -1,4 +1,4 @@
-//Zadanie 10d
+//Zadanie 10e
 package pl.lublin.wsei.java.cwiczenia;
 
 import java.util.Scanner;
@@ -30,7 +30,7 @@ public class Main {
         } while (true);
     }
 
-    public static String leftPad(String aText, char aChar, int aWidtch)
+    public String leftPad(String aText, char aChar, int aWidtch)
     {
         String res  = aText;
         for (int i = 0; i < aWidtch - aText.length(); i++ )
