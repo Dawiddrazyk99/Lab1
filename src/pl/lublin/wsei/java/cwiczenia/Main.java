@@ -1,12 +1,12 @@
-//Zadanie 7b
+//Zadanie 7c
 package pl.lublin.wsei.java.cwiczenia;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Ala");
-        System.out.println("ma");
-        System.out.println("kota");
+        System.out.print("Ala\n");
+        System.out.print("ma\n");
+        System.out.print("kota\n");
 
     }
 }
