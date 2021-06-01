@@ -1,42 +1,28 @@
-//Zadanie 10f
-package pl.lublin.wsei.java.cwiczenia;
+package pl.lublin.wsei.java.cwiczenia.mylib;
 
-import java.util.Scanner;
+public class StringFun {
+    public static boolean isPalindrome(String word){
 
-public class Main {
-
-    public static void main(String[] args) {
-
-        Scanner input = new Scanner(System.in);
-        int num1=0, num2=0;
-        do {
-            System.out.print("Podaj liczby, które mam dodać: ");
-            num1 = input.nextInt();
-            num2 = input.nextInt();
-
-            if ((num1 == 0) || (num2 == 0))
-                break;
-
-            int suma = num1 + num2;
-            String sumaString = Integer.toString(suma);
-
-            char character = '0';
-            int charWidth = 8;
-
-            System.out.printf("Wynik dodawania %d + %d:%n", num1, num2);
-            System.out.println("DEC: " + leftPad(sumaString, character, charWidth));
-            System.out.println("HEX: " + leftPad(Integer.toHexString(suma).toUpperCase(), character, charWidth));
-            System.out.println("BIN: " + leftPad(Integer.toBinaryString(suma), character, charWidth));
-        } while (true);
     }
 
-    private static String leftPad(String aText, char aChar, int aWidtch)
-    {
-        String res  = aText;
-        for (int i = 0; i < aWidtch - aText.length(); i++ )
-            res =aChar + res;
+    public static String anarchize(String word){
+        StringBuilder builder = new StringBuilder();
 
-        return  res;
+        boolean nextCase = Character.isUpperCase(word.charAt(0));
+        nextCase = !nextCase;
+
+        builder.append(word.charAt(0));
+
+        for(int i = 1; i < word.length(); i++){
+            if(nextCase){
+                builder.append(Character.toUpperCase(word.charAt(i)));
+            }else{
+                builder.append(Character.toLowerCase(word.charAt(i)));
+            }
+
+            nextCase = !nextCase;
+        }
+
+        return builder.toString();
     }
-
 }
