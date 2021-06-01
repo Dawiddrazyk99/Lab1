@@ -1,12 +1,4 @@
-public  static  String decamelize(String word){
-        StringBuilder builder = new StringBuilder();
-
-        for(int i = 0; i < word.length(); i++){
-        if(Character.isUpperCase(word.charAt(i)){
-        builder.append(" ");
-        }
-
-        builder.append(word.charAt(i));
-        }
-
-        return builder.toString();
+public static boolean isPalindrome(String word){
+        for(int i = 0; i < word.length() / 2; i++){
+        if(word.charAt(i) != word.charAt(word.length() - 1 - i))
+        return false;
