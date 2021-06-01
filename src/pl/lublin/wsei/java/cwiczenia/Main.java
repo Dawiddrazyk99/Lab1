@@ -1,28 +1,15 @@
-package pl.lublin.wsei.java.cwiczenia.mylib;
-
-public class StringFun {
-    public static boolean isPalindrome(String word){
-
-    }
-
-    public static String anarchize(String word){
+public  static  String camelize(String word){
         StringBuilder builder = new StringBuilder();
 
-        boolean nextCase = Character.isUpperCase(word.charAt(0));
-        nextCase = !nextCase;
+        String[] words = word.split(" ");
+        builder.append(words[0].toLowerCase());
 
-        builder.append(word.charAt(0));
+        for(int i = 1; i < words.length; i++){
+        String stringToAdd = words[i].substring(1).toLowerCase();
 
-        for(int i = 1; i < word.length(); i++){
-            if(nextCase){
-                builder.append(Character.toUpperCase(word.charAt(i)));
-            }else{
-                builder.append(Character.toLowerCase(word.charAt(i)));
-            }
-
-            nextCase = !nextCase;
+        builder.append(Character.toUpperCase(words[i].charAt(0)));
+        builder.append(stringToAdd);
         }
 
         return builder.toString();
-    }
-}
+        }
